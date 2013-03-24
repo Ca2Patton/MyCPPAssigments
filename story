@@ -9,3 +9,5 @@ cast across the repository.  No one could learn of the fathers heroic deeds beca
 Is there anyone in the land who can break the spell with 'diff'?
 
 All hope is lost because the daughter reads manga instead of learning the spell to break the curse.
+
+But nay, not all hope was lost, because the daughter did figure out how to use 'diff'.
