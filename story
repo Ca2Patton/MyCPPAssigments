@@ -8,4 +8,8 @@ Once the father properly configured the magic password tool, everything was fine
 cast across the repository.  No one could learn of the fathers heroic deeds because the git history was unknown.
 Is there anyone in the land who can break the spell with 'diff'?
 
+<<<<<<< HEAD
 All hope is lost because the daughter reads manga instead of learning the spell to break the curse.
+=======
+The daughter decided to Google the answers, for surely another had run into the same stumbling block whilst using 'diff'.
+>>>>>>> 3466a048b51793e150233ccfbd02d74654e4fbf0
