@@ -8,3 +8,4 @@ Once the father properly configured the magic password tool, everything was fine
 cast across the repository.  No one could learn of the fathers heroic deeds because the git history was unknown.
 Is there anyone in the land who can break the spell with 'diff'?
 
+The daughter decided to Google the answers, for surely another had run into the same stumbling block whilst using 'diff'.
