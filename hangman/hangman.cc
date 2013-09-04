@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <cctype>
 using namespace std;
 
 bool running = true;
 int MAXTRIES = 5;
 char letters[15];
-string word = "Strings!";
+string word = "strings";
 
 void Reveal();
 void Lose();
@@ -19,6 +20,7 @@ int main() {
 	while(running) {
 		cout << "Enter a letter: ";
 		cin >> guess;
+		guess = tolower(guess);
 		bool correct = 0;
 		for (int counter = 0; counter < word.length(); ++counter)
 		{
@@ -29,7 +31,7 @@ int main() {
 			}
 		}
 		if(correct == 0) --MAXTRIES;
-		cout << "You have " << MAXTRIES << " left." << endl;
+		cout << "You have " << MAXTRIES << " guesses left." << endl;
 		correct = 0;
 
 
@@ -57,8 +59,6 @@ void Reveal()
 void Win()
 {
 	cout << "Good job, you win!\n";
-	cout << "Press ENTER/RETURN to quit\n";
-	cin.get();
 	running = 0;
 	return;
 }
@@ -66,8 +66,6 @@ void Win()
 void Lose()
 {
 	cout << "A shame, you were unable to guess correctly. The word was " << word << "\n";
-	cout << "Press ENTER/RETURN to quit.\n";
-	cin.get();
 	running = 0;
 	return;
 }
