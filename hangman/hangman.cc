@@ -2,6 +2,11 @@
 #include <string>
 #include <cstdlib>
 #include <cctype>
+
+//Caitlin Ann Patton
+//COMSC48
+//C++ Part Two
+
 using namespace std;
 
 bool running = true;

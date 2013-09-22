@@ -1,0 +1,6 @@
+These are the lines in the file
+that are going to be made uppercase
+until the end of the file is reached
+to prove that I am capable of writing a program
+in C++, that is able to properly identify
+this text file.

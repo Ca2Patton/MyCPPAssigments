@@ -1,0 +1,11 @@
+open file: CTRL-X CTRL-F
+close file: CTRL-X CTRL-C
+start debugger: ESC-X gdb
+Bsearch file: CTRL-X CTRL-S
+search backwards: CTRL-X CTRL-R
+
+top of file: ESC SHIFT-<
+bottom of file: ESC SHIFT->
+
+splitscreen: CTRL-X [number]
+switch windows: CTRL-X o
