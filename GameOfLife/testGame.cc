@@ -64,9 +64,9 @@ void print_board (char board[][COLS]) {
 }
 
 void change_state (char board[][COLS]) {
+int neighbors = 0;
 	for (int row = 0; row < ROWS; row++) {
 		for (int c = 0; c < COLS; col++) {
-			int neighbors = 0;
 			if (board[r - 1][c - 1] == alive) {
 				neighbors++;
 			}
@@ -83,6 +83,7 @@ void change_state (char board[][COLS]) {
 				neighbors++;
 			}
 			if (board[r + 1][c - 1] == alive) {
+
 				neighbors++;
 			}
 			if (board[r + 1][c +1] == alive) {
