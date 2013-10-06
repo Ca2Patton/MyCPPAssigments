@@ -107,27 +107,27 @@ void evolve(char board[][COLS]) {
 			//if cell > 3 neighbors dies due to over population
 			//if cell is dead and has exactly three neighbors, resurrect it
 
-			cout << "Row " << row << endl << "Col " << col << endl << board[row][col] << endl;
+			//cout << "Row " << row << endl << "Col " << col << endl << board[row][col] << endl;
 
 			if (board[row][col] == dead && neighbors == 3) {
-				cout << "Rule 4 cell reproduces " << board[row][col] << endl;
+				//cout << "Rule 4 cell reproduces " << board[row][col] << endl;
 				board[row][col] = alive;
-				cout << board[row][col] << endl;
+				//cout << board[row][col] << endl;
 			}
 			if (board[row][col] == alive && neighbors < 2) {
-				cout << "Rule 1 cell starves " << board[row][col] << endl;
+				//cout << "Rule 1 cell starves " << board[row][col] << endl;
 				board[row][col] = dead;
-				cout << board[row][col] << endl;
+				//cout << board[row][col] << endl;
 			}
 			if (board[row][col] == alive && neighbors == 2 || neighbors == 3){
-				cout << "Rule 2 cell stays " << board[row][col] << endl;
+				//cout << "Rule 2 cell stays " << board[row][col] << endl;
 				board[row][col] = alive;
-				cout << board[row][col] << endl;
+				//cout << board[row][col] << endl;
 			}
 			if (board[row][col] == alive && neighbors > 3) {
-				cout << "Rule 3 cell overpopulates " << board[row][col] << endl;
+				//cout << "Rule 3 cell overpopulates " << board[row][col] << endl;
 				board[row][col] = dead;
-				cout << board[row][col] << endl;
+				//cout << board[row][col] << endl;
 			}
 		}
 	}
