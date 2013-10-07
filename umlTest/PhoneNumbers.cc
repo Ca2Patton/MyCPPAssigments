@@ -14,7 +14,7 @@ class PhoneNumber { //This class will help the user make a list of phone numbers
 		int year; //Stores the year the number was added, for some odd reason.
 	public:
 		PhoneNumber(); //Empty constructor
-		PhoneNumber(int ccode, int acode, int num, char line, int year); //Default Constructor
+		PhoneNumber(int ccode, int acode, int num, char line, int year);
 		PhoneNumber(int num, char line = 'B');
 		PhoneNumber(int acode, int num, char line = 'C');
 		void setCountry(int ccode);
@@ -32,45 +32,34 @@ class PhoneNumber { //This class will help the user make a list of phone numbers
 		void printPhoneNumberStats() const;
 };
 
-
-PhoneNumber::PhoneNumber(int ccode = 43, int acode = 800, int num = 8675309, char line = 'H', int year = 1981) {
-	return PhoneNumber;
+//The Default Constructor
+PhoneNumber::PhoneNumber() {
 }
 
+//Fill out the Phone Number class
 PhoneNumber::PhoneNumber(int ccode, int acode, int num, char line, int year) {
-	return PhoneNumber;
-}
-PhoneNumber::PhoneNumber(int num, char line = 'B') {
-	return PhoneNumber;
 }
 
-PhoneNumber::PhoneNumber (int acode, int num, char line = 'C') {
-	return PhoneNumber;
+PhoneNumber::PhoneNumber(int num, char line) {
+}
+
+PhoneNumber::PhoneNumber (int acode, int num, char line) {
 }
 
 void PhoneNumber::setCountry(int ccode) {
-	cout << "What Year is it?";
-	cin >> ccode;
+
 }
 
 void PhoneNumber::setArea(int acode) {
-	cout << "What is the area code?";
-	cin >> acode;
 }
 
 void PhoneNumber::setNumber(int num) {
-	cout << "What is the main number?";
-	cin >> num;
 }
 
 void PhoneNumber::setType(char line) {
-	cout << "What is the line type? 'C'ell, 'H'ome, or 'B'usiness?";
-	cin >> line;
 }
 
 void PhoneNumber::setYear(int year) {
-	cout << "What is the current year?";
-	cin >> year;
 }
 
 int PhoneNumber::getCountry() const {
@@ -85,7 +74,7 @@ int PhoneNumber::getNumber() const {
 	return number;
 }
 
-int PhoneNumber::getType() const {
+char PhoneNumber::getType() const {
 	return type;
 }
 
@@ -112,7 +101,7 @@ int main() {
 	PhoneNumber fourthNum(1234566, 'C');
 	PhoneNumber fifthNum(925, 4392181);
 	PhoneNumber sixthNum(925, 5512346, 'H');
-	firstNum.printNumber();
+	/*firstNum.printNumber();
 	firstNum.printPhoneNumberStats();
 	secondNum.printNumber();
 	secondNum.printPhoneNumberStats();
@@ -124,6 +113,6 @@ int main() {
 	fifthNum.printPhoneNumberStats();
 	sixthNum.printNumber();
 	sixthNum.printPhoneNumberStats();
-
+*/
 	return 0;
 }
