@@ -44,16 +44,21 @@ PhoneNumber::PhoneNumber() {
 }
 
 //Fill out the Phone Number class
-/* 
+ 
 PhoneNumber::PhoneNumber(int ccode, int acode, int num, char line, int year) {
 }
 
 PhoneNumber::PhoneNumber(int num, char line) {
+	setCountry(43);
+	setArea(800);
+	setYear(1981);
 }
 
 PhoneNumber::PhoneNumber (int acode, int num, char line) {
+	setCountry(43);
+	setYear(1981);
 }
-*/
+
 void PhoneNumber::setCountry(int ccode) {
 	countryCode = ccode;
 }
@@ -95,6 +100,12 @@ int PhoneNumber::getYear() const {
 }
 
 bool PhoneNumber::doubleDigits() const {
+	int phoneList[7];
+	int numb = number;
+	for (int counter = 6; counter >= 0; counter--) {
+		phoneList[counter] = numb % 10;
+		numb /= 10;
+	}
 return true;
 }
 
@@ -103,19 +114,20 @@ void PhoneNumber::printNumber() const {
 }
 
 void PhoneNumber::printPhoneNumberStats() const {
+	cout << "+" << countryCode << " (" << areaCode << ") " << "Line Type: " << type << " year " << year << endl;
 return;
 }
 
 int main() {
 
 	PhoneNumber firstNum;
-/*	PhoneNumber secondNum(39, 415, 867666, 'B', 2012);
+	PhoneNumber secondNum(39, 415, 867666, 'B', 2012);
 	PhoneNumber thirdNum(1212121);
 	PhoneNumber fourthNum(1234566, 'C');
 	PhoneNumber fifthNum(925, 4392181);
-*///	PhoneNumber sixthNum(925, 5512346, 'H');
+	PhoneNumber sixthNum(925, 5512346, 'H');
 	firstNum.printNumber();
-/*	firstNum.printPhoneNumberStats();
+	firstNum.printPhoneNumberStats();
 	secondNum.printNumber();
 	secondNum.printPhoneNumberStats();
 	thirdNum.printNumber();
@@ -126,6 +138,6 @@ int main() {
 	fifthNum.printPhoneNumberStats();
 	sixthNum.printNumber();
 	sixthNum.printPhoneNumberStats();
-*/
+
 	return 0;
 }
