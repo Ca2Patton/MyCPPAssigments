@@ -13,7 +13,7 @@ class Complex {
 		int real; //Real number
 		int imag; //Imaginary number
 	public:
-		Complex();
+		Complex(); //Default constructor.
 		Complex(int re);
 		Complex(int re, int im);
 		Complex operator + (const Complex& right) const;
@@ -25,7 +25,7 @@ class Complex {
 };
 
 Complex::Complex() {
-	real = 0;
+	real = 0; //Did not feel like creating "set" and "get" mutators. I'm lazy.
 	imag = 0;
 }
 
@@ -37,7 +37,7 @@ Complex::Complex(int re, int im) {
 	real = re;
 	imag = im;
 }
-
+//Overloading plus to deal with multiple arguments.
 Complex Complex::operator + (const Complex& right) const {
 	Complex temp;
 	temp.real = real + right.real;
@@ -45,21 +45,21 @@ Complex Complex::operator + (const Complex& right) const {
 	return temp;
 	
 }
-
+//Overloading minus to subtract pairs against other pairs.
 Complex Complex::operator - (const Complex& right) const {
-	Complex left;
+	Complex left; //Silly variable names exist because I don't know what else to name them.
 	left.real = real - right.real;
 	left.imag = imag - right.imag;
 	return left;
 }
-
+//Overloading the * operator to multiply pairs of numbers against other pairs.
 Complex Complex::operator * (const Complex& right) const {
 	Complex up;
 	up.real= real * right.real;
 	up.imag = imag * right.imag;
 	return up;
 }
-
+//Overloading the unary - operator to display negative numbers without error.
 Complex Complex::operator - () {
 	Complex foo;
 	foo.real = -real;
@@ -67,6 +67,7 @@ Complex Complex::operator - () {
 	return foo;
 }
 
+//Using a bool to compare the real/imaginary pairs against each other.
 bool Complex::operator == (const Complex& right) {
 	Complex test;
 	if (test.real == right.real && test.imag == right.imag)
@@ -75,6 +76,8 @@ bool Complex::operator == (const Complex& right) {
 		return false;
 }
 
+//This is where we overload the << to display our variables properly, otherwise cout doesn't know how
+//to display the variables. (I just love segmentation fault: 11
 ostream& operator << (ostream& out, const Complex& right) {
 	out << right.real << " + " << right.imag << "i";
 	return out;
